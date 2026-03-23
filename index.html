@@ -3,10 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lidertekstill</title>
+  <title>Lider Tekstil | Pendik Koltuk Döşeme, Minder ve Kırlent</title>
   <meta
     name="description"
-    content="Pendik koltuk döşeme, koltuk örtüsü dikimi, minder dikimi ve kırlent üretimi hizmetleri."
+    content="Pendik koltuk döşeme, koltuk örtüsü dikimi, minder dikimi ve kırlent üretimi hizmeti. Lider Tekstil ile ölçüye özel üretim ve hızlı fiyat teklifi alın."
+  />
+  <meta
+    name="keywords"
+    content="Pendik koltuk döşeme, minder dikimi Pendik, kırlent dikimi, koltuk örtüsü dikimi, Lider Tekstil"
   />
   <style>
     * { box-sizing: border-box; }
@@ -14,83 +18,63 @@
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background: #f5f5f5;
+      background: #f6f6f6;
       color: #111827;
-      line-height: 1.6;
+      line-height: 1.5;
     }
     a { text-decoration: none; color: inherit; }
-    img { max-width: 100%; display: block; }
     .container {
-      width: min(1180px, calc(100% - 32px));
+      width: min(1120px, calc(100% - 32px));
       margin: 0 auto;
     }
     .header {
       position: sticky;
       top: 0;
-      z-index: 100;
-      background: rgba(255,255,255,.95);
-      backdrop-filter: blur(8px);
+      z-index: 50;
+      background: rgba(255,255,255,.96);
       border-bottom: 1px solid #e5e7eb;
+      backdrop-filter: blur(8px);
     }
     .header-inner {
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      gap: 20px;
+      align-items: center;
+      gap: 16px;
       padding: 16px 0;
     }
     .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      min-width: 0;
-    }
-    .brand img {
-      width: 56px;
-      height: 56px;
-      object-fit: contain;
-      border-radius: 50%;
-      background: white;
-    }
-    .brand-title {
       font-size: 28px;
       font-weight: 800;
-      line-height: 1.1;
-    }
-    .brand-sub {
-      color: #6b7280;
-      font-size: 14px;
-    }
-    .nav {
-      display: flex;
-      gap: 24px;
-      font-size: 14px;
-      font-weight: 700;
     }
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
-      border-radius: 16px;
-      padding: 14px 22px;
+      padding: 12px 18px;
+      border-radius: 14px;
+      border: 1px solid #111827;
+      cursor: pointer;
       font-weight: 700;
       transition: .2s ease;
-      cursor: pointer;
-      border: none;
     }
     .btn:hover { transform: translateY(-1px); }
-    .btn-dark { background: #111827; color: white; }
-    .btn-light { background: white; color: #111827; border: 1px solid #d1d5db; }
-
-    .hero {
-      padding: 56px 0 40px;
+    .btn-dark {
+      background: #111827;
+      color: white;
     }
-    .hero-grid {
+    .btn-light {
+      background: white;
+      color: #111827;
+      border-color: #d1d5db;
+    }
+    .hero, .section {
+      padding: 56px 0;
+    }
+    .hero-grid, .contact-grid {
       display: grid;
       grid-template-columns: 1.05fr .95fr;
-      gap: 36px;
-      align-items: center;
+      gap: 28px;
+      align-items: start;
     }
     .badge {
       display: inline-block;
@@ -99,251 +83,237 @@
       background: white;
       border-radius: 999px;
       color: #4b5563;
+      margin-bottom: 14px;
       font-size: 14px;
-      margin-bottom: 16px;
     }
     h1 {
-      font-size: 56px;
-      line-height: 1.05;
       margin: 0;
+      font-size: 48px;
+      line-height: 1.08;
     }
-    .hero p {
-      color: #4b5563;
-      font-size: 18px;
-      max-width: 640px;
-      margin: 18px 0 0;
+    h2 {
+      margin: 0 0 12px;
+      font-size: 34px;
+      line-height: 1.1;
+    }
+    h3 {
+      margin: 0 0 8px;
+      font-size: 24px;
+    }
+    .muted {
+      color: #6b7280;
     }
     .hero-actions {
       display: flex;
-      gap: 14px;
       flex-wrap: wrap;
-      margin-top: 28px;
-    }
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-      margin-top: 28px;
+      gap: 12px;
+      margin-top: 24px;
     }
     .card {
       background: white;
-      border-radius: 24px;
-      box-shadow: 0 8px 24px rgba(0,0,0,.06);
+      border-radius: 22px;
+      box-shadow: 0 10px 24px rgba(0,0,0,.06);
     }
-    .stat-card { padding: 18px; }
-    .stat-title { font-weight: 800; font-size: 24px; }
-    .stat-sub { font-size: 14px; color: #6b7280; }
-
-    .hero-image {
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin-top: 24px;
+    }
+    .service-card {
+      padding: 22px;
+    }
+    .service-icon {
+      font-size: 34px;
+      margin-bottom: 8px;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-top: 24px;
+    }
+    .uploader {
       position: relative;
       overflow: hidden;
-      border-radius: 32px;
-      min-height: 480px;
-      box-shadow: 0 12px 32px rgba(0,0,0,.14);
-    }
-    .hero-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      position: absolute;
-      inset: 0;
-    }
-    .overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(0,0,0,.62), rgba(0,0,0,.18));
-    }
-    .hero-copy {
-      position: absolute;
-      left: 24px;
-      right: 24px;
-      bottom: 24px;
-      color: white;
-      z-index: 2;
-    }
-
-    .section { padding: 44px 0; }
-    .section-title-small {
-      color: #6b7280;
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: .18em;
-      font-weight: 700;
-      margin-bottom: 10px;
-    }
-    h2 {
-      margin: 0;
-      font-size: 40px;
-      line-height: 1.1;
-    }
-    .section-desc {
-      color: #4b5563;
-      max-width: 700px;
-      margin-top: 14px;
-    }
-
-    .services-grid,
-    .gallery-grid,
-    .before-after-grid {
-      display: grid;
-      gap: 22px;
-      margin-top: 28px;
-    }
-    .services-grid { grid-template-columns: repeat(4, 1fr); }
-    .gallery-grid { grid-template-columns: repeat(3, 1fr); }
-    .before-after-grid { grid-template-columns: repeat(2, 1fr); }
-
-    .service-card,
-    .gallery-card,
-    .info-card {
-      padding: 24px;
-    }
-    .service-icon { font-size: 38px; }
-    .service-title,
-    .gallery-title,
-    .info-title { font-size: 24px; font-weight: 800; margin-top: 10px; }
-    .muted { color: #6b7280; }
-
-    .why-grid,
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 28px;
-      align-items: start;
-    }
-    .steps-box {
-      padding: 24px;
-      background: #f3f4f6;
-      border-radius: 28px;
-    }
-    .step {
-      display: flex;
-      align-items: flex-start;
-      gap: 14px;
+      min-height: 260px;
+      border: 2px dashed #d1d5db;
       background: white;
-      border-radius: 18px;
-      padding: 16px;
-      margin-top: 14px;
+      border-radius: 22px;
     }
-    .step-number {
-      width: 36px;
-      height: 36px;
-      border-radius: 999px;
-      background: #111827;
-      color: white;
-      display: inline-flex;
+    .uploader.hero-uploader {
+      min-height: 380px;
+    }
+    .uploader.empty {
+      display: flex;
       align-items: center;
       justify-content: center;
-      font-weight: 700;
-      flex-shrink: 0;
+      text-align: center;
+      padding: 24px;
     }
-
-    .gallery-image,
-    .before-after-image {
-      width: 100%;
-      height: 260px;
-      object-fit: cover;
-      background: #e5e7eb;
+    .uploader.empty.dragover {
+      border-color: #111827;
+      background: #f3f4f6;
     }
-    .gallery-body,
-    .before-after-body { padding: 20px; }
-
-    .contact-section {
+    .uploader-content {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+    }
+    .uploader-icon {
+      font-size: 42px;
+    }
+    .uploader-title {
+      font-size: 20px;
+      font-weight: 800;
+    }
+    .uploader-desc {
+      color: #6b7280;
+      font-size: 14px;
+      max-width: 320px;
+    }
+    .uploader-action {
       background: #111827;
       color: white;
-      margin-top: 20px;
-      padding: 60px 0;
+      padding: 10px 16px;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 700;
     }
-    .contact-section .muted,
-    .contact-section .section-title-small { color: #d1d5db; }
-
-    .contact-list div { margin-top: 12px; }
-
-    .form-card {
+    .preview-wrap {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      min-height: 260px;
+    }
+    .preview-wrap img {
+      width: 100%;
+      height: 100%;
+      min-height: 260px;
+      object-fit: cover;
+      display: block;
+    }
+    .hero-uploader .preview-wrap img {
+      min-height: 380px;
+    }
+    .preview-overlay {
+      position: absolute;
+      inset: auto 0 0 0;
+      background: linear-gradient(to top, rgba(0,0,0,.7), rgba(0,0,0,.15));
+      color: white;
+      padding: 18px;
+    }
+    .change-btn {
+      position: absolute;
+      top: 14px;
+      right: 14px;
       background: white;
       color: #111827;
-      padding: 24px;
-      border-radius: 28px;
-      box-shadow: 0 12px 32px rgba(0,0,0,.15);
+      padding: 10px 14px;
+      border-radius: 12px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 10px 20px rgba(0,0,0,.12);
     }
-    .form-grid { display: grid; gap: 14px; margin-top: 18px; }
-
+    .hidden-input {
+      display: none;
+    }
+    .contact-card {
+      padding: 24px;
+    }
+    .form-grid {
+      display: grid;
+      gap: 14px;
+      margin-top: 18px;
+    }
+    label {
+      display: block;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 7px;
+    }
     input, select, textarea {
       width: 100%;
-      padding: 14px 16px;
-      border-radius: 16px;
+      padding: 14px 15px;
+      border-radius: 14px;
       border: 1px solid #d1d5db;
       font: inherit;
+      background: white;
     }
-    textarea { min-height: 130px; resize: vertical; }
-
-    iframe {
-      width: 100%;
-      height: 420px;
-      border: 0;
-      border-radius: 28px;
-      box-shadow: 0 10px 28px rgba(0,0,0,.08);
+    textarea {
+      min-height: 130px;
+      resize: vertical;
     }
-
-    .floating-wa {
+    .whatsapp-float {
       position: fixed;
       right: 18px;
       bottom: 18px;
-      z-index: 150;
+      z-index: 60;
       background: #16a34a;
       color: white;
-      padding: 16px 18px;
+      padding: 14px 18px;
       border-radius: 999px;
-      box-shadow: 0 12px 28px rgba(0,0,0,.2);
       font-weight: 800;
+      box-shadow: 0 14px 26px rgba(0,0,0,.2);
     }
-
-    .mobile-hide { display: flex; }
-
-    @media (max-width: 1024px) {
-      .services-grid { grid-template-columns: repeat(2, 1fr); }
-      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-      .hero-grid, .why-grid, .contact-grid { grid-template-columns: 1fr; }
-      h1 { font-size: 44px; }
-      h2 { font-size: 34px; }
+    .sr-only-seo {
+      position: absolute;
+      left: -9999px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
     }
-
-    @media (max-width: 768px) {
-      .nav { display: none; }
-      .mobile-hide { display: none; }
-      .header-inner { flex-wrap: wrap; }
-      .brand-title { font-size: 22px; }
-      .services-grid, .gallery-grid, .before-after-grid, .stats { grid-template-columns: 1fr; }
-      .hero { padding-top: 28px; }
-      h1 { font-size: 34px; }
-      h2 { font-size: 28px; }
-      .hero-image { min-height: 340px; }
-      .gallery-image, .before-after-image { height: 220px; }
+    @media (max-width: 960px) {
+      .hero-grid, .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      h1 { font-size: 38px; }
+      h2 { font-size: 30px; }
+    }
+    @media (max-width: 640px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .brand {
+        font-size: 24px;
+      }
+      .services-grid,
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+      h1 { font-size: 32px; }
+      h2 { font-size: 26px; }
+      .hero, .section { padding: 42px 0; }
+      .whatsapp-float {
+        right: 12px;
+        bottom: 12px;
+        padding: 12px 16px;
+      }
     }
   </style>
 </head>
 <body>
+  <div class="sr-only-seo">
+    Pendik koltuk döşeme, minder dikimi, kırlent ve koltuk örtüsü hizmeti
+  </div>
+
   <header class="header">
     <div class="container header-inner">
-      <div class="brand">
-        <img src="lider-tekstil-logo.png" alt="Lider Tekstil Logo" />
-        <div>
-          <div class="brand-title">Lidertekstill</div>
-          <div class="brand-sub">Koltuk döşeme • koltuk örtüsü • minder • kırlent</div>
-        </div>
-      </div>
-
-      <nav class="nav">
-        <a href="#hizmetler">Hizmetler</a>
-        <a href="#neden-biz">Neden Biz</a>
-        <a href="#galeri">Galeri</a>
-        <a href="#iletisim">İletişim</a>
-      </nav>
-
+      <div class="brand">Lider Tekstil</div>
       <a
-        class="btn btn-dark mobile-hide"
-        href="https://wa.me/905323548182?text=Merhaba%2C%20koltuk%20d%C3%B6%C5%9Feme%20veya%20minder%20i%C3%A7in%20fiyat%20almak%20istiyorum."
+        class="btn btn-dark"
+        id="headerWhatsappBtn"
+        href="https://wa.me/905323548182?text=Merhaba%2C%20fiyat%20almak%20istiyorum"
         target="_blank"
+        rel="noreferrer"
       >
         WhatsApp Teklif Al
       </a>
@@ -355,283 +325,220 @@
       <div class="container hero-grid">
         <div>
           <div class="badge">Özel ölçü üretim ve yenileme hizmeti</div>
-          <h1>Yaşam alanınıza uygun özel tasarım döşeme ve dikim çözümleri</h1>
-          <p>
-            Koltuk döşeme, koltuk örtüsü dikimi, minder dikimi ve kırlent üretiminde
-            ölçünüze, kumaş seçiminize ve tarzınıza uygun çözümler sunuyoruz.
+          <h1>Pendik Koltuk Döşeme ve Minder Dikimi Hizmeti</h1>
+          <p class="muted" style="font-size:18px; margin-top:14px;">
+            Pendik koltuk döşeme, minder dikimi, kırlent dikimi ve koltuk örtüsü
+            hizmeti alanlarında ölçüye özel üretim yapıyoruz. Eski koltuklarınızı
+            yenileyerek modern ve şık hale getiriyoruz.
           </p>
 
           <div class="hero-actions">
             <a
               class="btn btn-dark"
-              href="https://wa.me/905323548182?text=Merhaba%2C%20koltuk%20d%C3%B6%C5%9Feme%20veya%20minder%20i%C3%A7in%20fiyat%20almak%20istiyorum."
+              id="heroWhatsappBtn"
+              href="https://wa.me/905323548182?text=Merhaba%2C%20fiyat%20almak%20istiyorum"
               target="_blank"
+              rel="noreferrer"
             >
               WhatsApp'tan Fiyat Sor
             </a>
-            <a class="btn btn-light" href="#galeri">Örnek İşleri Gör</a>
-          </div>
-
-          <div class="stats">
-            <div class="card stat-card">
-              <div class="stat-title">Özel</div>
-              <div class="stat-sub">ölçü çalışılır</div>
-            </div>
-            <div class="card stat-card">
-              <div class="stat-title">Kaliteli</div>
-              <div class="stat-sub">kumaş seçenekleri</div>
-            </div>
-            <div class="card stat-card">
-              <div class="stat-title">Uygun</div>
-              <div class="stat-sub">fiyat teklifi</div>
-            </div>
+            <a class="btn btn-light" href="#galeri">Galeriyi Gör</a>
           </div>
         </div>
 
-        <div class="hero-image">
-          <img
-            src="https://images.unsplash.com/photo-1616627981459-5c7f6b0c2c2a?q=80&w=1400&auto=format&fit=crop"
-            alt="Koltuk döşeme ve minder çalışması"
-          />
-          <div class="overlay"></div>
-          <div class="hero-copy">
-            <div style="font-size:13px; letter-spacing:.18em; text-transform:uppercase; color:#e5e7eb; font-weight:700;">
-              Lidertekstill Atölye
+        <div
+          class="uploader hero-uploader empty"
+          data-slot="hero"
+          data-title="Ana Kapak Görseli"
+          data-desc="Buraya kapak fotoğrafını sürükleyip bırakabilir veya bilgisayardan seçebilirsin."
+        >
+          <div class="uploader-content">
+            <div class="uploader-icon">🖼️</div>
+            <div class="uploader-title">Ana Kapak Görseli</div>
+            <div class="uploader-desc">
+              Buraya kapak fotoğrafını sürükleyip bırakabilir veya bilgisayardan seçebilirsin.
             </div>
-            <div style="font-size:34px; font-weight:800; margin-top:8px;">
-              Koltuk Döşeme • Minder • Kırlent
-            </div>
-            <div style="margin-top:8px; color:#e5e7eb; max-width:540px;">
-              Gerçek atölye üretimi, kaliteli kumaş ve ölçüye özel çözümler.
-            </div>
+            <div class="uploader-action">Resim Seç veya Buraya Sürükle</div>
           </div>
+          <input class="hidden-input" type="file" accept="image/*" />
         </div>
       </div>
     </section>
 
-    <section class="section" id="hizmetler">
+    <section class="section">
       <div class="container">
-        <div class="section-title-small">Hizmetlerimiz</div>
-        <h2>Neler yapıyoruz?</h2>
-        <p class="section-desc">
-          Ev, balkon, sedir ve salon alanları için yenileme ve özel üretim çözümleri sunuyoruz.
-        </p>
-
+        <h2>Hizmetlerimiz</h2>
         <div class="services-grid">
           <div class="card service-card">
             <div class="service-icon">🛋️</div>
-            <div class="service-title">Koltuk Döşeme</div>
-            <p class="muted">
-              Eskiyen koltuklarınızı yenileyen, ölçüye ve zevke göre uygulanan profesyonel döşeme hizmeti.
-            </p>
+            <h3>Pendik Koltuk Döşeme</h3>
+            <div class="muted">
+              Pendik bölgesinde eskiyen koltuklarınızı yenileyen, ölçüye ve zevke göre profesyonel koltuk döşeme hizmeti.
+            </div>
           </div>
 
           <div class="card service-card">
             <div class="service-icon">🧷</div>
-            <div class="service-title">Koltuk Örtüsü Dikimi</div>
-            <p class="muted">
-              Koltuklarınızı koruyan ve görünümünü yenileyen, ölçüye özel koltuk örtüsü dikimi.
-            </p>
+            <h3>Koltuk Örtüsü Dikimi</h3>
+            <div class="muted">
+              Koltuklarınızı koruyan ve görünümünü yenileyen ölçüye özel koltuk örtüsü dikimi hizmeti.
+            </div>
           </div>
 
           <div class="card service-card">
             <div class="service-icon">🪡</div>
-            <div class="service-title">Minder Dikimi</div>
-            <p class="muted">
-              Balkon, sedir, mutfak ve özel alanlar için ölçüye özel minder üretimi.
-            </p>
+            <h3>Minder Dikimi Pendik</h3>
+            <div class="muted">
+              Pendik ve çevresinde balkon, sedir ve özel alanlar için ölçüye özel minder üretimi.
+            </div>
           </div>
 
           <div class="card service-card">
             <div class="service-icon">🧵</div>
-            <div class="service-title">Kırlent Dikimi</div>
-            <p class="muted">
-              Evinize uyum sağlayan, özel kumaş ve ölçü seçenekleriyle şık kırlent tasarımları.
-            </p>
+            <h3>Kırlent Dikimi</h3>
+            <div class="muted">
+              Evinize uyum sağlayan, özel kumaş seçenekleriyle modern ve şık kırlent tasarımları.
+            </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="neden-biz" style="background:white;">
-      <div class="container why-grid">
-        <div>
-          <div class="section-title-small">Neden Biz?</div>
-          <h2>Süreci sade ve güvenli yürütüyoruz</h2>
-          <p class="section-desc">
-            İhtiyacınızı dinleyip kumaş, ölçü ve model detaylarını netleştiriyoruz.
-            Ardından fiyat teklifini veriyor, onay sonrası üretime geçiyoruz.
-          </p>
-        </div>
-
-        <div class="steps-box">
-          <div class="info-title" style="margin-top:0; font-size:28px;">Çalışma Sürecimiz</div>
-          <div class="step"><div class="step-number">1</div><div>Model veya ölçüyü bize gönderin</div></div>
-          <div class="step"><div class="step-number">2</div><div>Kumaş ve tasarım detaylarını birlikte belirleyelim</div></div>
-          <div class="step"><div class="step-number">3</div><div>Fiyat teklifinizi oluşturalım</div></div>
-          <div class="step"><div class="step-number">4</div><div>Üretim ve teslim sürecini başlatalım</div></div>
         </div>
       </div>
     </section>
 
     <section class="section" id="galeri">
       <div class="container">
-        <div class="section-title-small">Instagram Galerisi</div>
-        <h2>İşlerimizi Instagram üzerinden inceleyin</h2>
-        <p class="section-desc">
-          Bu alan Instagram vitrininiz için hazırlandı. Ziyaretçiler doğrudan Instagram hesabınıza geçebilir.
-        </p>
-
-        <div class="card info-card" style="margin-top:24px;">
-          <div style="display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap; align-items:center;">
-            <div>
-              <div class="info-title" style="margin-top:0;">@lider_tekstil_pendik</div>
-              <div class="muted">Koltuk döşeme • minder dikimi • kırlent dikimi</div>
-            </div>
-            <a
-              class="btn btn-dark"
-              href="https://www.instagram.com/lider_tekstil_pendik"
-              target="_blank"
-            >
-              Instagram'da Takip Et
-            </a>
-          </div>
+        <h2>Galeri</h2>
+        <div class="muted">
+          Kodla uğraşmadan aşağıdaki alanlara resim sürükleyip bırakabilir veya dosya seçebilirsin.
         </div>
 
         <div class="gallery-grid">
-          <div class="card gallery-card" style="padding:0; overflow:hidden;">
-            <div class="gallery-image" style="display:flex;align-items:center;justify-content:center;color:#6b7280;font-weight:700;">Instagram Foto Alanı 1</div>
-            <div class="gallery-body">
-              <div class="gallery-title">Özel ölçü minder</div>
-              <p class="muted">Instagram profilinizden ürün fotoğrafları burada sergilenebilir.</p>
+          <div
+            class="uploader empty"
+            data-slot="gallery1"
+            data-title="Galeri 1"
+            data-desc="Koltuk döşeme fotoğrafı"
+          >
+            <div class="uploader-content">
+              <div class="uploader-icon">🖼️</div>
+              <div class="uploader-title">Galeri 1</div>
+              <div class="uploader-desc">Koltuk döşeme fotoğrafı</div>
+              <div class="uploader-action">Resim Seç veya Buraya Sürükle</div>
             </div>
+            <input class="hidden-input" type="file" accept="image/*" />
           </div>
 
-          <div class="card gallery-card" style="padding:0; overflow:hidden;">
-            <div class="gallery-image" style="display:flex;align-items:center;justify-content:center;color:#6b7280;font-weight:700;">Instagram Foto Alanı 2</div>
-            <div class="gallery-body">
-              <div class="gallery-title">Modern kırlent tasarımı</div>
-              <p class="muted">Gerçek müşteri işleri ve atölye çekimleriyle vitrininiz güçlenir.</p>
+          <div
+            class="uploader empty"
+            data-slot="gallery2"
+            data-title="Galeri 2"
+            data-desc="Koltuk örtüsü fotoğrafı"
+          >
+            <div class="uploader-content">
+              <div class="uploader-icon">🖼️</div>
+              <div class="uploader-title">Galeri 2</div>
+              <div class="uploader-desc">Koltuk örtüsü fotoğrafı</div>
+              <div class="uploader-action">Resim Seç veya Buraya Sürükle</div>
             </div>
+            <input class="hidden-input" type="file" accept="image/*" />
           </div>
 
-          <div class="card gallery-card" style="padding:0; overflow:hidden;">
-            <div class="gallery-image" style="display:flex;align-items:center;justify-content:center;color:#6b7280;font-weight:700;">Instagram Foto Alanı 3</div>
-            <div class="gallery-body">
-              <div class="gallery-title">Yenilenmiş koltuk döşeme</div>
-              <p class="muted">Öncesi-sonrası çalışmaları burada öne çıkarabilirsiniz.</p>
+          <div
+            class="uploader empty"
+            data-slot="gallery3"
+            data-title="Galeri 3"
+            data-desc="Minder fotoğrafı"
+          >
+            <div class="uploader-content">
+              <div class="uploader-icon">🖼️</div>
+              <div class="uploader-title">Galeri 3</div>
+              <div class="uploader-desc">Minder fotoğrafı</div>
+              <div class="uploader-action">Resim Seç veya Buraya Sürükle</div>
             </div>
+            <input class="hidden-input" type="file" accept="image/*" />
           </div>
 
-          <div class="card gallery-card" style="padding:0; overflow:hidden;">
-            <div class="gallery-image" style="display:flex;align-items:center;justify-content:center;color:#6b7280;font-weight:700;">Instagram Foto Alanı 4</div>
-            <div class="gallery-body">
-              <div class="gallery-title">Sedir minderi uygulaması</div>
-              <p class="muted">Sedir, balkon ve özel ölçü minder işleriniz ayrı gösterilebilir.</p>
+          <div
+            class="uploader empty"
+            data-slot="gallery4"
+            data-title="Galeri 4"
+            data-desc="Kırlent fotoğrafı"
+          >
+            <div class="uploader-content">
+              <div class="uploader-icon">🖼️</div>
+              <div class="uploader-title">Galeri 4</div>
+              <div class="uploader-desc">Kırlent fotoğrafı</div>
+              <div class="uploader-action">Resim Seç veya Buraya Sürükle</div>
             </div>
-          </div>
-
-          <div class="card gallery-card" style="padding:0; overflow:hidden;">
-            <div class="gallery-image" style="display:flex;align-items:center;justify-content:center;color:#6b7280;font-weight:700;">Instagram Foto Alanı 5</div>
-            <div class="gallery-body">
-              <div class="gallery-title">Klasik tarz kırlent</div>
-              <p class="muted">Renk ve kumaş seçeneklerinizi öne çıkaran vitrin alanı.</p>
-            </div>
-          </div>
-
-          <div class="card gallery-card" style="padding:0; overflow:hidden;">
-            <div class="gallery-image" style="display:flex;align-items:center;justify-content:center;color:#6b7280;font-weight:700;">Instagram Foto Alanı 6</div>
-            <div class="gallery-body">
-              <div class="gallery-title">Atölye işi özel üretim</div>
-              <p class="muted">Atölye görüntüleri güven verir ve müşteri dönüşümünü artırır.</p>
-            </div>
+            <input class="hidden-input" type="file" accept="image/*" />
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="oncesi-sonrasi">
+    <section class="section">
       <div class="container">
-        <div class="section-title-small">Öncesi / Sonrası</div>
-        <h2>Koltuk Döşeme Yenileme</h2>
-        <p class="section-desc">Eski koltuklarınızı yenileyerek tamamen yeni bir görünüme kavuşturuyoruz.</p>
-
-        <div class="before-after-grid">
-          <div class="card" style="overflow:hidden;">
-            <img
-              class="before-after-image"
-              src="https://images.unsplash.com/photo-1582582429416-5a4c3bfa6b1b?q=80&w=1200&auto=format&fit=crop"
-              alt="Öncesi"
-            />
-            <div class="before-after-body"><strong>Öncesi</strong></div>
-          </div>
-
-          <div class="card" style="overflow:hidden;">
-            <img
-              class="before-after-image"
-              src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1200&auto=format&fit=crop"
-              alt="Sonrası"
-            />
-            <div class="before-after-body"><strong>Sonrası</strong></div>
-          </div>
+        <h2>Neden Lider Tekstil?</h2>
+        <div class="muted">
+          Pendik koltuk döşeme ve minder dikimi alanında kaliteli işçilik, uygun fiyat ve hızlı teslimat ile hizmet veriyoruz.
         </div>
       </div>
     </section>
 
-    <section class="section" id="harita">
-      <div class="container">
-        <div class="section-title-small">Konum</div>
-        <h2>Dükkan Konumumuz</h2>
-        <p class="section-desc">
-          Batı Mah. İsmetpaşa Cad. No:25/A Pendik / İstanbul adresindeki dükkanımıza haritadan ulaşabilirsiniz.
-        </p>
-
-        <div style="margin-top:24px;">
-          <iframe
-            src="https://maps.google.com/maps?q=Bat%C4%B1%20Mah.%20%C4%B0smetpa%C5%9Fa%20Cad.%20No%3A25%2FA%20Pendik%20%C4%B0stanbul&t=&z=15&ie=UTF8&iwloc=&output=embed"
-            loading="lazy"
-          ></iframe>
-        </div>
-      </div>
-    </section>
-
-    <section class="contact-section" id="iletisim">
+    <section class="section">
       <div class="container contact-grid">
         <div>
-          <div class="section-title-small">İletişim</div>
-          <h2>Teklif almak için bize ulaşın</h2>
-          <p class="section-desc" style="color:#d1d5db;">
-            Koltuk döşeme, minder ve kırlent ihtiyaçlarınız için ölçülerinizi ve istediğiniz modeli paylaşın, size uygun teklif hazırlayalım.
-          </p>
-
-          <div class="contact-list">
-            <div>📍 Batı Mah. İsmetpaşa Cad. No:25/A Pendik / İstanbul</div>
-            <div>📞 0532 354 81 82</div>
-            <div>☎️ 0216 390 76 85</div>
-            <div>📩 lidertekstilll@gmail.com</div>
-            <div>📷 <a href="https://www.instagram.com/lider_tekstil_pendik" target="_blank">lider_tekstil_pendik</a></div>
-          </div>
+          <h2>İletişim</h2>
+          <p>📍 Batı Mah. İsmetpaşa Cad. No:25/A Pendik</p>
+          <p>📞 0532 354 81 82</p>
+          <p>☎️ 0216 390 76 85</p>
+          <p>📷 <a href="https://www.instagram.com/lider_tekstil_pendik" target="_blank" rel="noreferrer">@lider_tekstil_pendik</a></p>
         </div>
 
-        <div class="form-card">
-          <div class="info-title" style="margin-top:0;">Hızlı Teklif Formu</div>
+        <div class="card contact-card">
+          <h3>Hızlı Fiyat Alma Formu</h3>
+          <div class="muted">
+            Formu doldurunca WhatsApp'a seçtiğin hizmet ve yazdığın açıklama otomatik gider.
+          </div>
+
           <div class="form-grid">
-            <input type="text" placeholder="Ad Soyad" />
-            <input type="text" placeholder="Telefon Numaranız" />
-            <select>
-              <option>Hizmet seçin</option>
-              <option>Koltuk Döşeme</option>
-              <option>Koltuk Örtüsü Dikimi</option>
-              <option>Minder Dikimi</option>
-              <option>Kırlent Dikimi</option>
-            </select>
-            <textarea placeholder="Ölçü, kumaş veya istediğiniz modeli yazın"></textarea>
+            <div>
+              <label for="hizmet">Hizmet</label>
+              <select id="hizmet">
+                <option>Koltuk Döşeme</option>
+                <option>Koltuk Örtüsü Dikimi</option>
+                <option>Minder Dikimi</option>
+                <option>Kırlent Dikimi</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="ad">Ad Soyad</label>
+              <input id="ad" type="text" placeholder="Ad Soyad" />
+            </div>
+
+            <div>
+              <label for="telefon">Telefon</label>
+              <input id="telefon" type="text" placeholder="Telefon Numaranız" />
+            </div>
+
+            <div>
+              <label for="olcu">Ölçü</label>
+              <input id="olcu" type="text" placeholder="Örn: 3'lü koltuk 220 cm" />
+            </div>
+
+            <div>
+              <label for="aciklama">Açıklama</label>
+              <textarea id="aciklama" placeholder="Kumaş, renk, model veya istediğiniz detayları yazın"></textarea>
+            </div>
+
             <a
               class="btn btn-dark"
-              href="https://wa.me/905323548182?text=Merhaba%2C%20fiyat%20teklifi%20almak%20istiyorum."
+              id="offerWhatsappBtn"
+              href="#"
               target="_blank"
+              rel="noreferrer"
             >
-              WhatsApp ile Gönder
+              WhatsApp'tan Gönder
             </a>
           </div>
         </div>
@@ -640,11 +547,162 @@
   </main>
 
   <a
-    class="floating-wa"
-    href="https://wa.me/905323548182?text=Merhaba%2C%20koltuk%20d%C3%B6%C5%9Feme%20veya%20minder%20i%C3%A7in%20fiyat%20almak%20istiyorum."
+    class="whatsapp-float"
+    id="floatingWhatsappBtn"
+    href="https://wa.me/905323548182?text=Merhaba%2C%20fiyat%20almak%20istiyorum"
     target="_blank"
+    rel="noreferrer"
   >
-    💬 WhatsApp Teklif Al
+    WhatsApp
   </a>
+
+  <script>
+    const WHATSAPP_NUMBER = "905323548182";
+
+    function getWhatsAppLink(message) {
+      return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+    }
+
+    function buildOfferMessage() {
+      const hizmet = document.getElementById("hizmet").value || "Belirtilmedi";
+      const ad = document.getElementById("ad").value.trim() || "Belirtilmedi";
+      const telefon = document.getElementById("telefon").value.trim() || "Belirtilmedi";
+      const olcu = document.getElementById("olcu").value.trim() || "Belirtilmedi";
+      const aciklama = document.getElementById("aciklama").value.trim() || "Belirtilmedi";
+
+      return `Merhaba, ${hizmet} için fiyat almak istiyorum.
+Ad Soyad: ${ad}
+Telefon: ${telefon}
+Ölçü: ${olcu}
+Açıklama: ${aciklama}`;
+    }
+
+    function updateOfferButton() {
+      const btn = document.getElementById("offerWhatsappBtn");
+      btn.href = getWhatsAppLink(buildOfferMessage());
+    }
+
+    ["hizmet", "ad", "telefon", "olcu", "aciklama"].forEach((id) => {
+      const el = document.getElementById(id);
+      el.addEventListener("input", updateOfferButton);
+      el.addEventListener("change", updateOfferButton);
+    });
+
+    document.getElementById("headerWhatsappBtn").href = getWhatsAppLink("Merhaba, fiyat almak istiyorum");
+    document.getElementById("heroWhatsappBtn").href = getWhatsAppLink("Merhaba, fiyat almak istiyorum");
+    document.getElementById("floatingWhatsappBtn").href = getWhatsAppLink("Merhaba, fiyat almak istiyorum");
+    updateOfferButton();
+
+    const STORAGE_KEY = "lider-tekstil-images";
+
+    function getStoredImages() {
+      try {
+        return JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
+      } catch {
+        return {};
+      }
+    }
+
+    function saveStoredImages(images) {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(images));
+    }
+
+    const storedImages = getStoredImages();
+
+    function renderUploader(uploader, imageSrc) {
+      const title = uploader.dataset.title || "Görsel";
+      const desc = uploader.dataset.desc || "";
+      const input = uploader.querySelector("input[type='file']");
+
+      if (imageSrc) {
+        uploader.classList.remove("empty");
+        uploader.innerHTML = `
+          <div class="preview-wrap">
+            <img src="${imageSrc}" alt="${title}">
+            <div class="preview-overlay">
+              <div style="font-weight:800;">${title}</div>
+              <div style="font-size:14px;opacity:.88;">${desc}</div>
+            </div>
+            <label class="change-btn">Resmi Değiştir</label>
+          </div>
+        `;
+        const newInput = document.createElement("input");
+        newInput.type = "file";
+        newInput.accept = "image/*";
+        newInput.className = "hidden-input";
+        uploader.appendChild(newInput);
+
+        const label = uploader.querySelector(".change-btn");
+        label.addEventListener("click", () => newInput.click());
+        newInput.addEventListener("change", (e) => {
+          const file = e.target.files[0];
+          handleFile(uploader, file);
+        });
+      } else {
+        uploader.classList.add("empty");
+        uploader.innerHTML = `
+          <div class="uploader-content">
+            <div class="uploader-icon">🖼️</div>
+            <div class="uploader-title">${title}</div>
+            <div class="uploader-desc">${desc}</div>
+            <div class="uploader-action">Resim Seç veya Buraya Sürükle</div>
+          </div>
+        `;
+        const newInput = document.createElement("input");
+        newInput.type = "file";
+        newInput.accept = "image/*";
+        newInput.className = "hidden-input";
+        uploader.appendChild(newInput);
+
+        uploader.addEventListener("click", (e) => {
+          if (e.target === uploader || e.target.closest(".uploader-content")) {
+            newInput.click();
+          }
+        });
+
+        newInput.addEventListener("change", (e) => {
+          const file = e.target.files[0];
+          handleFile(uploader, file);
+        });
+      }
+    }
+
+    function handleFile(uploader, file) {
+      if (!file || !file.type.startsWith("image/")) return;
+      const reader = new FileReader();
+      reader.onload = function() {
+        const slot = uploader.dataset.slot;
+        storedImages[slot] = reader.result;
+        saveStoredImages(storedImages);
+        bindUploader(uploader, reader.result);
+      };
+      reader.readAsDataURL(file);
+    }
+
+    function bindUploader(uploader, imageSrc) {
+      renderUploader(uploader, imageSrc);
+
+      uploader.addEventListener("dragover", (e) => {
+        e.preventDefault();
+        uploader.classList.add("dragover");
+      });
+
+      uploader.addEventListener("dragleave", () => {
+        uploader.classList.remove("dragover");
+      });
+
+      uploader.addEventListener("drop", (e) => {
+        e.preventDefault();
+        uploader.classList.remove("dragover");
+        const file = e.dataTransfer.files && e.dataTransfer.files[0];
+        handleFile(uploader, file);
+      });
+    }
+
+    document.querySelectorAll(".uploader").forEach((uploader) => {
+      const slot = uploader.dataset.slot;
+      bindUploader(uploader, storedImages[slot] || null);
+    });
+  </script>
 </body>
 </html>
