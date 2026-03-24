@@ -1019,10 +1019,22 @@ h2 {
   border-bottom: none;
 }
 
-.contact-icon {
-  color: rgba(255, 255, 255, .35);
+.contact-icon-wrap {
+  width: 34px;
+  height: 34px;
+  border: 1px solid rgba(255, 255, 255, .10);
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, .04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
-  margin-top: 2px;
+}
+
+.contact-icon {
+  width: 16px;
+  height: 16px;
+  color: rgba(255, 255, 255, .45);
 }
 
 .contact-item-body {
@@ -1074,6 +1086,9 @@ h2 {
 }
 
 .contact-hours-title {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
   font-size: var(--text-xs);
   font-weight: var(--weight-bold);
   letter-spacing: 0.1em;
