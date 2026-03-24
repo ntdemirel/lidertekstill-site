@@ -705,6 +705,79 @@ h2 {
   margin-top: var(--sp-6);
 }
 
+/* ---------- Gallery placeholder ---------- */
+.gallery-image {
+  position: relative;
+  background-color: var(--color-surface-alt);
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 8px,
+    rgba(28, 25, 23, .025) 8px,
+    rgba(28, 25, 23, .025) 9px
+  );
+}
+
+.gallery-image::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* subtle center mark */
+  background-image:
+    radial-gradient(circle, rgba(28,25,23,.08) 1.5px, transparent 1.5px);
+  background-size: 18px 18px;
+  background-position: center;
+}
+
+/* ---------- Trust Strip ---------- */
+.trust-strip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0;
+  margin-top: var(--sp-7);
+  margin-bottom: var(--sp-6);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.trust-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-1);
+  padding: var(--sp-5) var(--sp-7);
+  flex: 1;
+  min-width: 120px;
+}
+
+.trust-num {
+  font-size: var(--text-xl);
+  font-weight: var(--weight-black);
+  color: var(--color-primary);
+  letter-spacing: -0.5px;
+}
+
+.trust-label {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+.trust-divider {
+  width: 1px;
+  height: 40px;
+  background: var(--color-border);
+  flex-shrink: 0;
+}
+
 /* ================================================
    ÖNCESİ / SONRASI
    ================================================ */
@@ -734,6 +807,61 @@ h2 {
   color: var(--color-text-muted);
   letter-spacing: 0.05em;
   text-transform: uppercase;
+}
+
+/* ================================================
+   MÜŞTERİ YORUMLARI
+   ================================================ */
+.testimonials-section {
+  background: var(--color-surface-alt);
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-5);
+  margin-top: var(--sp-7);
+}
+
+.testimonial-card {
+  padding: var(--sp-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+  background: var(--color-surface);
+}
+
+.testimonial-stars {
+  color: var(--color-accent);
+  font-size: var(--text-base);
+  letter-spacing: 3px;
+}
+
+.testimonial-text {
+  color: var(--color-text);
+  font-size: var(--text-base);
+  line-height: 1.75;
+  margin: 0;
+  flex: 1;
+}
+
+.testimonial-meta {
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--sp-4);
+  margin-top: auto;
+}
+
+.testimonial-name {
+  font-weight: var(--weight-bold);
+  font-size: var(--text-base);
+  color: var(--color-primary);
+}
+
+.testimonial-service {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  font-weight: var(--weight-medium);
+  margin-top: var(--sp-1);
 }
 
 /* ================================================
@@ -1058,8 +1186,26 @@ textarea {
 
   .services-grid,
   .gallery-grid,
-  .before-after-grid {
+  .before-after-grid,
+  .testimonials-grid {
     grid-template-columns: 1fr;
+  }
+
+  .trust-strip {
+    gap: var(--sp-1);
+  }
+
+  .trust-item {
+    padding: var(--sp-4) var(--sp-5);
+    min-width: 100px;
+  }
+
+  .trust-num {
+    font-size: var(--text-lg);
+  }
+
+  .trust-divider {
+    height: 30px;
   }
 
   .stats {
