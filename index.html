@@ -64,7 +64,7 @@
     <section class="hero">
       <div class="container hero-grid">
 
-        <div>
+        <div data-reveal>
           <div class="badge">Özel ölçü üretim ve yenileme hizmeti</div>
           <h1>Yaşam alanınıza uygun özel tasarım döşeme ve dikim çözümleri</h1>
           <p>
@@ -100,7 +100,7 @@
           </div>
         </div>
 
-        <div class="hero-image">
+        <div class="hero-image" data-reveal data-reveal-delay="1">
           <img
             src="https://images.unsplash.com/photo-1616627981459-5c7f6b0c2c2a?q=80&w=1400&auto=format&fit=crop"
             alt="Koltuk döşeme ve minder çalışması"
@@ -127,25 +127,25 @@
         </p>
 
         <div class="services-grid">
-          <div class="card service-card">
+          <div class="card service-card" data-reveal data-reveal-delay="1">
             <div class="service-icon" aria-hidden="true">🛋️</div>
             <div class="service-title">Koltuk Döşeme</div>
             <p class="muted">Eskiyen koltuklarınızı yenileyen, ölçüye ve zevke göre uygulanan profesyonel döşeme hizmeti.</p>
           </div>
 
-          <div class="card service-card">
+          <div class="card service-card" data-reveal data-reveal-delay="2">
             <div class="service-icon" aria-hidden="true">🧷</div>
             <div class="service-title">Koltuk Örtüsü Dikimi</div>
             <p class="muted">Koltuklarınızı koruyan ve görünümünü yenileyen, ölçüye özel koltuk örtüsü dikimi.</p>
           </div>
 
-          <div class="card service-card">
+          <div class="card service-card" data-reveal data-reveal-delay="3">
             <div class="service-icon" aria-hidden="true">🪡</div>
             <div class="service-title">Minder Dikimi</div>
             <p class="muted">Balkon, sedir, mutfak ve özel alanlar için ölçüye özel minder üretimi.</p>
           </div>
 
-          <div class="card service-card">
+          <div class="card service-card" data-reveal data-reveal-delay="4">
             <div class="service-icon" aria-hidden="true">🧵</div>
             <div class="service-title">Kırlent Dikimi</div>
             <p class="muted">Evinize uyum sağlayan, özel kumaş ve ölçü seçenekleriyle şık kırlent tasarımları.</p>
@@ -200,14 +200,14 @@
         </p>
 
         <!-- Güven Şeridi -->
-        <div class="trust-strip">
+        <div class="trust-strip" data-reveal>
           <div class="trust-item">
-            <span class="trust-num">10+</span>
+            <span class="trust-num" data-count-to="10" data-count-suffix="+">10+</span>
             <span class="trust-label">Yıl Deneyim</span>
           </div>
           <div class="trust-divider" aria-hidden="true"></div>
           <div class="trust-item">
-            <span class="trust-num">500+</span>
+            <span class="trust-num" data-count-to="500" data-count-suffix="+">500+</span>
             <span class="trust-label">Tamamlanan İş</span>
           </div>
           <div class="trust-divider" aria-hidden="true"></div>
@@ -332,7 +332,7 @@
 
         <div class="testimonials-grid">
 
-          <div class="card testimonial-card">
+          <div class="card testimonial-card" data-reveal data-reveal-delay="1">
             <div class="testimonial-stars" aria-label="5 yıldız">★★★★★</div>
             <p class="testimonial-text">
               "Balkon sedirim için ölçüye özel minder diktirdim. Tam istediğim gibi oldu,
@@ -344,7 +344,7 @@
             </div>
           </div>
 
-          <div class="card testimonial-card">
+          <div class="card testimonial-card" data-reveal data-reveal-delay="2">
             <div class="testimonial-stars" aria-label="5 yıldız">★★★★★</div>
             <p class="testimonial-text">
               "Eski koltuklar sanki yeni gibi oldu. Hem fiyat hem de işçilik beklediğimden
@@ -356,7 +356,7 @@
             </div>
           </div>
 
-          <div class="card testimonial-card">
+          <div class="card testimonial-card" data-reveal data-reveal-delay="3">
             <div class="testimonial-stars" aria-label="5 yıldız">★★★★★</div>
             <p class="testimonial-text">
               "WhatsApp'tan ölçü gönderdim, aynı gün teklif geldi. Koltuk örtüsü tam
@@ -397,7 +397,7 @@
       <div class="container contact-grid">
 
         <!-- Sol: İletişim bilgileri -->
-        <div>
+        <div data-reveal>
           <div class="section-title-small">İletişim</div>
           <h2>Size en kısa sürede dönelim</h2>
           <p class="section-desc">
@@ -511,7 +511,7 @@
         </div>
 
         <!-- Sağ: Form -->
-        <div class="form-card">
+        <div class="form-card" data-reveal data-reveal-delay="1">
           <div class="form-card-header">
             <div class="info-title">Hızlı Teklif Formu</div>
             <p class="form-card-note">Formu doldurun, WhatsApp üzerinden size dönelim.</p>
@@ -586,9 +586,6 @@
     <span class="floating-wa-text">WhatsApp Teklif Al</span>
   </a>
 
-  <script>
-    document.getElementById('current-year').textContent = new Date().getFullYear();
-  </script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>
