@@ -90,8 +90,10 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 body {
@@ -855,6 +857,11 @@ h2 {
   flex-direction: column;
   gap: var(--sp-4);
   background: var(--color-surface);
+  transition: box-shadow 300ms var(--ease-out);
+}
+
+.testimonial-card:hover {
+  box-shadow: var(--shadow-md);
 }
 
 .testimonial-stars {
@@ -1291,11 +1298,19 @@ textarea {
   .btn,
   .card,
   .service-card,
-  .gallery-card {
+  .gallery-card,
+  .testimonial-card,
+  .stat-card {
     transition: none;
   }
 
   .header {
+    transition: none;
+  }
+
+  .floating-wa,
+  .contact-wa-primary,
+  .contact-wa-arrow {
     transition: none;
   }
 }

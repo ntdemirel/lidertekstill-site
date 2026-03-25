@@ -74,6 +74,12 @@ if (revealEls.length && 'IntersectionObserver' in window) {
 function animateCounter(el) {
   const target   = parseInt(el.dataset.countTo, 10);
   const suffix   = el.dataset.countSuffix || '';
+
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    el.textContent = target + suffix;
+    return;
+  }
+
   const duration = 1400;
   const start    = performance.now();
 
